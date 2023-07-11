@@ -1,40 +1,26 @@
-def sayHello():
-    print("Hello World")
+primes = [2, 3, 5, 7, 11, 13, 17, 19]
+primes[0]  # 2
+primes[7]  # 19
+primes[8]  # IndexError: list index out of range
+primes[-1]  # 19
+primes[-9]  # IndexError: list index out of range
 
+weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+weekdays[1] = "Tue"
 
-def sayHello2():
-    print("Hello")
-    print("World")
+temperatures = [14.5, 8.0, -2.5, 15.0]
+temperatures[-2] = 10.0
 
+type(primes)  # <class 'list'>
+type(weekdays)  # <class 'list'>
+type(temperatures)  # <class 'list'>
 
-def sayBye():
-    print("Goodbye Mars")
+[2, 4, 6, 8] * 3  # [2, 4, 6, 8, 2, 4, 6, 8, 2, 4, 6, 8]
+[0] * 3  # [0, 0, 0]
+weekdays * 2  # ['Mon', 'Tue', 'Wed', 'Thu', 'Mon', 'Tue', 'Wed', 'Thu']
 
+weekend = ["Sat", "Sun"]
+daysOfWeek = weekdays + weekend
+daysOfWeek  # ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
-# TODO: Write `sayBye2` function here
-
-
-# A simple kilograms to ounces conversion program
-# It asks for a weight in kilograms (for example 10)
-# and converts it to ounces (352.74)
-def kilos2Ounces():
-    kilos = float(input("Enter a weight in kilograms: "))
-    ounces = kilos * 35.274
-    print("The weight in ounces is", ounces)
-
-
-def count():
-    for number in range(10):
-        print("Number is now: ", number)
-
-
-# A simple euros to pounds conversion program
-# It asks for a value in euros (for example 10)
-# and converts it to pounds (8.7)
-def euros2Pounds():
-    euros = float(input("Enter a value in euros: "))
-    pounds = euros * 0.87
-    print("The value in pounds is", pounds)
-
-
-# TODO: Write `dollars2Pounds` and the rest of your solutions for the programming exercises here
+primes2 = primes + [23, 29]
