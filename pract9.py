@@ -1,3 +1,6 @@
+from graphics import *
+
+
 def displayMonths():
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -28,10 +31,3 @@ def readPrime():
         if num in primes:
             break
     print(num, "is a prime number less than 20")
-
-import site
-sitePackagesPath = site.getsitepackages()[0]
-print(sitePackagesPath)
-
-# from graphics import *
-# pointList = [Point(10, 30), Point(50, 20)]
