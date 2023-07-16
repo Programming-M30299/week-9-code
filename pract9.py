@@ -19,3 +19,12 @@ def processNumbers():
         if i % 2 == 0:  # Only process numbers at even indexes
             square = numbers[i] ** 2
             print("The square of {} is {}".format(numbers[i], square))
+
+
+def readPrime():
+    primes = [2, 3, 5, 7, 11, 13, 17, 19]
+    while True:
+        num = int(input("Enter a prime number less than 20: "))
+        if num in primes:
+            break
+    print(num, "is a prime number less than 20")
