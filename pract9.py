@@ -31,3 +31,18 @@ def readPrime():
         if num in primes:
             break
     print(num, "is a prime number less than 20")
+
+
+def changeColours():
+    win = GraphWin()
+    circles = []
+    for x in range(50, 200, 100):
+        for y in range(50, 200, 100):
+            circle = Circle(Point(x, y), 50)
+            circle.setFill("red")
+            circle.draw(win)
+            circles.append(circle)  # Add the circle to the list
+
+    for circle in circles:  # For each circle in the list
+        win.getMouse()  # Wait for a mouse click
+        circle.setFill("green")  # Change the colour of the circle
