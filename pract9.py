@@ -46,3 +46,13 @@ def changeColours():
     for circle in circles:  # For each circle in the list
         win.getMouse()  # Wait for a mouse click
         circle.setFill("green")  # Change the colour of the circle
+
+
+def displayMenu():
+    menu = [("Chicken Tikka Masala", 900, 8.95),
+            ("Lamnb Rogan Josh", 700, 7.95),
+            ("Vegetable Biryani", 600, 6.95),
+            ("Portion of poppadoms", 100, 0.75)]
+    for item in menu:
+        name, calories, price = item
+        print("{:20} {:5} calories, £{:4.2f}".format(name, calories, price))
