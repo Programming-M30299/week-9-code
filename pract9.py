@@ -56,3 +56,14 @@ def displayMenu():
     for item in menu:
         name, calories, price = item
         print("{:20} {:5} calories, £{:4.2f}".format(name, calories, price))
+
+
+def iterateStudents():
+    studnets = {
+        3419903: "Lou",
+        7470773: "Nannie",
+        5285384: "Hester"
+    }
+    for upNum in studnets:
+        name = studnets[upNum]
+        print("UP{} is {}".format(upNum, name))
