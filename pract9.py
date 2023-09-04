@@ -48,6 +48,24 @@ def changeColours():
         circle.setFill("green")  # Change the colour of the circle
 
 
+def filterFruits(fruits):
+    fruitsILike = set()  # Create an empty set
+    for fruit in fruits:
+        if fruit != "kiwi" and fruit != "pear":
+            fruitsILike.add(fruit)
+    return fruitsILike
+
+
+def updateUoPIds(uopIds):
+    newIds = set()
+    for uopId in uopIds:
+        if uopId.startswith("UP") or uopId.startswith("up"):
+            newIds.add(uopId[2:])
+        else:
+            newIds.add(uopId)
+    return newIds
+
+
 def displayMenu():
     menu = [("Chicken Tikka Masala", 900, 8.95),
             ("Lamnb Rogan Josh", 700, 7.95),
