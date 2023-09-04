@@ -60,7 +60,7 @@ def updateUoPIds(uopIds):
     newIds = set()
     for uopId in uopIds:
         if uopId.startswith("UP") or uopId.startswith("up"):
-            newIds.add(uopId[2:])
+            newIds.add(uopId[2:]) # Remove the first two characters
         else:
             newIds.add(uopId)
     return newIds
