@@ -1,6 +1,6 @@
 from graphics import *
 
-
+# List example:
 def displayMonths():
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -8,6 +8,7 @@ def displayMonths():
         print(month)
 
 
+# List example:
 def displayTemperatureOfWeek():
     temperatures = [14.5, 8.0, -2.5, 15.0, 12.5, 9.0, -1.0]
     for temp in temperatures:
@@ -16,6 +17,7 @@ def displayTemperatureOfWeek():
             print("Brrrrr, that's freezing!")
 
 
+# List example:
 def processNumbers():
     numbers = [11, 28, 32, 34, 45, 67, 70, 89, 90, 99]
     for i in range(len(numbers)):
@@ -24,6 +26,7 @@ def processNumbers():
             print("The square of {} is {}".format(numbers[i], square))
 
 
+# List example:
 def readPrime():
     primes = [2, 3, 5, 7, 11, 13, 17, 19]
     while True:
@@ -33,6 +36,7 @@ def readPrime():
     print(num, "is a prime number less than 20")
 
 
+# List example:
 def changeColours():
     win = GraphWin()
     circles = []
@@ -48,15 +52,7 @@ def changeColours():
         circle.setFill("green")  # Change the colour of the circle
 
 
-def filterFruits():
-    fruits = {"apple", "banana", "kiwi", "pear", "orange"}
-    fruitsILike = set()  # Create an empty set
-    for fruit in fruits:
-        if fruit != "kiwi" and fruit != "pear":
-            fruitsILike.add(fruit)
-    print(fruitsILike)
-
-
+# List of tuples example:
 def displayMenu():
     menu = [("Chicken Tikka Masala", 900, 8.95),
             ("Lamnb Rogan Josh", 700, 7.95),
@@ -67,6 +63,17 @@ def displayMenu():
         print("{:20} {:5} calories, £{:4.2f}".format(name, calories, price))
 
 
+# Set example:
+def filterFruits():
+    fruits = {"apple", "banana", "kiwi", "pear", "orange"}
+    fruitsILike = set()  # Create an empty set
+    for fruit in fruits:
+        if fruit != "kiwi" and fruit != "pear":
+            fruitsILike.add(fruit)
+    print(fruitsILike)
+
+
+# Dictionary example:
 def iterateStudents():
     studnets = {
         3419903: "Lou",
