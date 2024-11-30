@@ -1,6 +1,7 @@
 from graphix import Window, Circle, Point, Polygon
 
 
+# Examples of Lists:
 def display_months():
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -8,8 +9,7 @@ def display_months():
         print(month)
 
 
-# List example:
-def displayTemperatureOfWeek():
+def display_temperature_of_week():
     temperatures = [14.5, 8.0, -2.5, 15.0, 12.5, 9.0, -1.0]
     for temp in temperatures:
         print(f"It's {temp} degrees today")
@@ -17,8 +17,7 @@ def displayTemperatureOfWeek():
             print("Brrrrr, that's freezing!")
 
 
-# List example:
-def processNumbers():
+def process_numbers():
     numbers = [11, 28, 32, 34, 45, 67, 70, 89, 90, 99]
     for i in range(len(numbers)):
         if i % 2 == 0:  # Only process numbers at even indexes
@@ -26,8 +25,7 @@ def processNumbers():
             print(f"The square of {numbers[i]} is {square}")
 
 
-# List example:
-def readPrime():
+def read_prime():
     primes = [2, 3, 5, 7, 11, 13, 17, 19]
     while True:
         num = int(input("Enter a prime number less than 20: "))
@@ -36,8 +34,7 @@ def readPrime():
     print(f"{num} is a prime number less than 20")
 
 
-# List example:
-def changeColours():
+def change_colours():
     win = Window()
     circles = []
     for x in range(50, 200, 100):
@@ -52,8 +49,8 @@ def changeColours():
         circle.fill_colour = "green"  # Change the colour of the circle
 
 
-# List of tuples example:
-def displayMenu():
+# Example of Tuples:
+def display_menu():
     menu = [("Chicken Tikka Masala", 900, 8.95),
             ("Lamb Rogan Josh", 700, 7.95),
             ("Vegetable Biryani", 600, 6.95),
@@ -62,9 +59,8 @@ def displayMenu():
         name, calories, price = item
         print(f"{name:20} {calories:5} calories, £{price:4.2f}")
 
-# Set example:
 
-
+# Example of Sets:
 def filter_fruits():
     fruits = {"apple", "banana", "kiwi", "pear", "orange"}
     favourite_fruits = set()  # Create an empty set
@@ -74,7 +70,7 @@ def filter_fruits():
     print(favourite_fruits)
 
 
-# Dictionary example:
+# Example of Dictionaries:
 def iterate_students():
     students = {
         3419903: "Lou",
