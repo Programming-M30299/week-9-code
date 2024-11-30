@@ -1,7 +1,7 @@
-from graphics import *
+from graphix import Window, Circle, Point, Polygon
 
-# List example:
-def displayMonths():
+
+def display_months():
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     for month in months:
@@ -12,7 +12,7 @@ def displayMonths():
 def displayTemperatureOfWeek():
     temperatures = [14.5, 8.0, -2.5, 15.0, 12.5, 9.0, -1.0]
     for temp in temperatures:
-        print("It's {} degrees today".format(temp))
+        print(f"It's {temp} degrees today")
         if temp < 0:
             print("Brrrrr, that's freezing!")
 
@@ -23,7 +23,7 @@ def processNumbers():
     for i in range(len(numbers)):
         if i % 2 == 0:  # Only process numbers at even indexes
             square = numbers[i] ** 2
-            print("The square of {} is {}".format(numbers[i], square))
+            print(f"The square of {numbers[i]} is {square}")
 
 
 # List example:
@@ -33,53 +33,57 @@ def readPrime():
         num = int(input("Enter a prime number less than 20: "))
         if num in primes:
             break
-    print(num, "is a prime number less than 20")
+    print(f"{num} is a prime number less than 20")
 
 
 # List example:
 def changeColours():
-    win = GraphWin()
+    win = Window()
     circles = []
     for x in range(50, 200, 100):
         for y in range(50, 200, 100):
             circle = Circle(Point(x, y), 50)
-            circle.setFill("red")
+            circle.fill_colour = "red"
             circle.draw(win)
             circles.append(circle)  # Add the circle to the list
 
     for circle in circles:  # For each circle in the list
-        win.getMouse()  # Wait for a mouse click
-        circle.setFill("green")  # Change the colour of the circle
+        win.get_mouse()  # Wait for a mouse click
+        circle.fill_colour = "green"  # Change the colour of the circle
 
 
 # List of tuples example:
 def displayMenu():
     menu = [("Chicken Tikka Masala", 900, 8.95),
-            ("Lamnb Rogan Josh", 700, 7.95),
+            ("Lamb Rogan Josh", 700, 7.95),
             ("Vegetable Biryani", 600, 6.95),
             ("Portion of poppadoms", 100, 0.75)]
     for item in menu:
         name, calories, price = item
-        print("{:20} {:5} calories, £{:4.2f}".format(name, calories, price))
-
+        print(f"{name:20} {calories:5} calories, £{price:4.2f}")
 
 # Set example:
-def filterFruits():
+
+
+def filter_fruits():
     fruits = {"apple", "banana", "kiwi", "pear", "orange"}
-    fruitsILike = set()  # Create an empty set
+    favourite_fruits = set()  # Create an empty set
     for fruit in fruits:
         if fruit != "kiwi" and fruit != "pear":
-            fruitsILike.add(fruit)
-    print(fruitsILike)
+            favourite_fruits.add(fruit)
+    print(favourite_fruits)
 
 
 # Dictionary example:
-def iterateStudents():
-    studnets = {
+def iterate_students():
+    students = {
         3419903: "Lou",
         7470773: "Nannie",
         5285384: "Hester"
     }
-    for upNum in studnets:
-        name = studnets[upNum]
-        print("UP{} is {}".format(upNum, name))
+    for up_num in students:
+        name = students[up_num]
+        print(f"UP{up_num} is {name}")
+
+
+# Solutions to programming exercises
