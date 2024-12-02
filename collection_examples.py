@@ -80,6 +80,3 @@ def iterate_students():
     for up_num in students:
         name = students[up_num]
         print(f"UP{up_num} is {name}")
-
-
-# Solutions to programming exercises
